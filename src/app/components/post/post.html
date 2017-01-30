@@ -1,13 +1,19 @@
 <div class="header">
     <div class="user-picture">
-         <!--<img src="{{post.user.pictureUrl}}">-->
+        <!--<div *ngif="post.user.pictureUrl">
+            <img src="{{post.user.pictureUrl}}">-->
+        <!--</div>        -->
     </div>
     <div class="username">
         {{post.user.username}}
     </div>
     <div class="right">
         {{post.creationTime | date: 'dd/MM/yyyy'}}
-        <div style="margin-left: 10px;" class="actions"><a [class.liked]="post.liked"><i class="glyphicon glyphicon-heart"></i></a></div>
+        <div style="margin-left: 10px;" class="actions">
+            <a [class.liked]="post.liked"(click)="LikePost()" >
+                <i class="glyphicon glyphicon-heart"></i>
+            </a>
+    </div>
     </div>
 
 </div>
@@ -22,10 +28,16 @@
         <div *ngIf = "post.content.type == 'youtube'">
             <youtube-post-content [postContent]="post.content"></youtube-post-content>
         </div>
+        <div *ngIf = "post.content.type == 'video'">
+            <video-post-content [postContent]="post.content"></video-post-content>
+        </div>
+        <div *ngIf = "post.content.type == 'lien'">
+           <a href="{{post.content.value.mediaUrl}}">Click-me</a>
+        </div>
     </div>
 </div>
 <div class="footer">
-
+    
 </div>
 <style>
     :host {

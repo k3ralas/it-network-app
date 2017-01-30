@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Post } from 'models';
+import { Post, Like } from 'models';
 import { PostService, PostSocketService, LoggedUser, MessageParser } from 'services';
 
 @Component({
@@ -16,10 +16,16 @@ export class PostComponent {
         private parser: MessageParser
     ) {}
 
-    ngOnInit() {
-        var currentpars = this.parser.parse(this.post)
-        console.log(currentpars)
-        this.post.content = currentpars;   
+    ngOnInit() { 
+        this.post.content = this.parser.parse(this.post);   
+        this.postSocket.onLike(this.OnLike);
     }
 
+    LikePost(){
+        this.postService.like(this.post);
+    }
+
+     OnLike = (like:Like) => {
+         if(like.post.id===this.post.id && like.user.id===this.user.id) this.post.liked=true;
+    }
 }

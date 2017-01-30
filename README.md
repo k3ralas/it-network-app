@@ -62,10 +62,10 @@
 2. Afficher l'auteur des messages                                       [X]
 3. Afficher la date du postes                                           [X]
 4. Insérer les nouveaux postes reçues via WebSocket                     [X]
-5. Afficher une image si le message contient une url vers une image
-6. Afficher une video si le message contient une url vers une vidéo (https://www.html5rocks.com/en/tutorials/video/basics/devstories.mp4)
-7. Afficher le player de youtube si le message contient un lien youtube
-8. Ajouter le bouton like
+5. Afficher une image si le message contient une url vers une image     [X]
+6. Afficher une video si le message contient une url vers une vidéo (https://www.html5rocks.com/en/tutorials/video/basics/devstories.mp4) [X]
+7. Afficher le player de youtube si le message contient un lien youtube [X]
+8. Ajouter le bouton like                                               [X]
 
 ### Level II
 9. Retirer les urls des messages parsés pour ne restituer que son contenu [X]
