@@ -8,14 +8,21 @@ import { AuthenticationService } from '../../services/index';
     selector: 'login',
     templateUrl: 'login.html'
 })
-export class LoginComponent  {
+export class LoginComponent {
     model = new UserLogin();
+    error: string;
     constructor(
-            private authService: AuthenticationService,
-            private router : Router
+        private authService: AuthenticationService,
+        private router: Router
     ) { }
 
     login() {
-        return this.authService.authenticate(this.model);
+        this.authService.authenticate(this.model).then(
+            () => { console.log("ok"); this.router.navigateByUrl("/"); },
+        )
+            .catch((ex) => {
+                this.error = "Nom d'utilisateur ou Mot de passe invalide"
+                
+            });
     }
 }

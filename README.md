@@ -19,35 +19,35 @@
 
 #### Level I
 
-1. Faire le formulaire de login
-2. Rendre username et le mot de passe obligatoire
-3. Rediriger l'utilisateur sur /
+1. Faire le formulaire de login                                         [X]
+2. Rendre username et le mot de passe obligatoire                       [X]
+3. Rediriger l'utilisateur sur /                                        [X]
 
 #### Level II
 
-4. Afficher les messages d'erreurs de validation pour chaque champs
-5. Afficher un message si le login à échoué
+4. Afficher les messages d'erreurs de validation pour chaque champs     [X]
+5. Afficher un message si le login à échoué                             [X]
 
 ### Register
 
 #### Level I
-
-1. Faire le formulaire pour l'ajout d'un user
-2. Rendre username et le mot de passe obligatoire
-3. En cas de succès, rediriger l'utilisateur sur /login
+    
+1. Faire le formulaire pour l'ajout d'un user                           [X]
+2. Rendre username et le mot de passe obligatoire                       [X]
+3. En cas de succès, rediriger l'utilisateur sur /login                 [X]
 
 #### Level II
-4. Afficher les messages d'erreurs de validation  pour chaque champs
-5. Gérer les username déjà utilisés
+4. Afficher les messages d'erreurs de validation  pour chaque champs    [X]
+5. Gérer les username déjà utilisés                                     [X]
 
 
 ### Channel
 
 #### Level I
 
-1. Afficher la liste des channels dans le menu
-2. Pouvoir créer un nouveau channel
-3. Naviguer sur un channel au clic dans le menu
+1. Afficher la liste des channels dans le menu                          [X]
+2. Pouvoir créer un nouveau channel                                     [X]
+3. Naviguer sur un channel au clic dans le menu                         [X]
 
 #### Level II
 

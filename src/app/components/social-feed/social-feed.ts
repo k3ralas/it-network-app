@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+// import { Component, OnInit } from '@angular/core';
+import { Component, Input,OnInit, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PostSocketService, PostService } from 'services';
-import { Post, PostContent } from 'models';
+import { Post, PostContent, Channel } from 'models';
 
 @Component({
   selector: 'social-feed', 
@@ -27,6 +28,10 @@ export class SocialFeedComponent implements OnInit {
                         this.items = items
                     });
             } );
+            this.postSocket.onPost(this.addedPost);
     }
     
+addedPost = (post:Post) => {
+        this.items.unshift(post);
+    }
 }

@@ -11,6 +11,7 @@ export class UserInputsComponent {
 
     @Input() channelId: string;
     message:string;
+    errorPost: string;
 
     constructor(
         private postervice: PostService
@@ -18,5 +19,12 @@ export class UserInputsComponent {
     }
 
     send() {
+        this.postervice.post(this.channelId, this.message)
+        .then(
+            () => {this.message = "" }
+        )
+        .catch((ex) => {
+                this.errorPost = ex                
+            });
     }
 }

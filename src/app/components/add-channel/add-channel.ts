@@ -17,12 +17,15 @@ export class AddChannelComponent {
     model =  {name: ''};
     
     constructor(
+        private ChannelServ : ChannelService
     ) {
     }
 
     save() {
+        console.log(this.model.name)
         if (this.ngForm.valid) {
-      
+            console.log(this.ngForm.valid)
+            this.ChannelServ.add(this.model.name);
         }
     }
 }
