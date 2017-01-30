@@ -6,4 +6,5 @@ import { PostContent, PicturePostContent } from 'models';
 })
 export class PictureFeedContentComponent {
     @Input() postContent: PicturePostContent = new PicturePostContent("");
+    constructor(){};
 }

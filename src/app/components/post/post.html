@@ -1,11 +1,15 @@
 <div class="header">
     <div class="user-picture">
+         <!--<img src="{{post.user.pictureUrl}}">-->
     </div>
     <div class="username">
+        {{post.user.username}}
     </div>
     <div class="right">
-        <div class="actions"><a [class.liked]="post.liked"><i class="glyphicon glyphicon-heart"></i></a></div>
+        {{post.creationTime | date: 'dd/MM/yyyy'}}
+        <div style="margin-left: 10px;" class="actions"><a [class.liked]="post.liked"><i class="glyphicon glyphicon-heart"></i></a></div>
     </div>
+
 </div>
 <div class="body">
     <pre class="message">{{post.message}}</pre>
@@ -14,7 +18,7 @@
     </div>
 </div>
 <div class="footer">
-    
+
 </div>
 <style>
     :host {
