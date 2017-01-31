@@ -32,7 +32,7 @@
             <video-post-content [postContent]="post.content"></video-post-content>
         </div>
         <div *ngIf = "post.content.type == 'lien'">
-           <a href="{{post.content.value.mediaUrl}}">Click-me</a>
+           <a href="{{post.content.value.mediaUrl}}">{{post.content.value.mediaUrl}}</a>
         </div>
     </div>
 </div>

@@ -72,7 +72,7 @@
 
 ### Level III
 10. Pouvoir parser plusieurs type de contenus dans un seul poste
-11. Remplacer les liens http par des balises <a>...</a>.
+11. Remplacer les liens http par des balises <a>...</a>.                [X]
 
 ### Commentaires
 
